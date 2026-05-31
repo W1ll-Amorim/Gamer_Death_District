@@ -33,15 +33,15 @@ Jogo de plataforma 2D desenvolvido com Godot Engine 4.6.
 
 ### Menu Principal
 
-![Menu Principal](screeshots/print1.png)
+![Menu Principal](screenshots/print1.png)
 
 ### Instruções
 
-![Instruções do jogo](screeshots/print2.png)
+![Instruções do jogo](screenshots/print2.png)
 
 ### Game play
 
-![Game Play](screeshots/gameplay.gif)
+![Game Play](screenshots/gameplay.gif)
 
 ## 🚀 Como executar
 

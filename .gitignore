@@ -1,18 +1,34 @@
-# Godot 4+ specific ignores
+
+# Godot 4
 .godot/
 
-/android/build
+# Exportações
+export/
+exports/
+build/
 
-/export/build
+# IDEs
+.vscode/
+.idea/
 
-.mono/
-
+# Logs
 *.log
 
-.import/
-
+# Sistema
 .DS_Store
 Thumbs.db
 
-.vscode/
-.idea/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
