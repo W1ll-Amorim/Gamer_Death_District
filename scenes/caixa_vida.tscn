@@ -1,0 +1,26 @@
+[gd_scene format=3 uid="uid://b03s8gmtkt024"]
+
+[ext_resource type="Script" uid="uid://btriqyuk220rf" path="res://scripts/caixa_vida.gd" id="1_xipnu"]
+[ext_resource type="Texture2D" uid="uid://bfefwqjiorxe6" path="res://assets/sprites/itens/Sprite caixa medica.png" id="2_swtt1"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ljsbu"]
+size = Vector2(20.610725, 15.620995)
+
+[node name="caixa_vida" type="Node2D" unique_id=1451667031]
+
+[node name="caixa_vida" type="Area2D" parent="." unique_id=823173193 groups=["reset"]]
+collision_layer = 0
+collision_mask = 2
+script = ExtResource("1_xipnu")
+
+[node name="Sprite2D" type="Sprite2D" parent="caixa_vida" unique_id=901564014]
+scale = Vector2(0.031249957, 0.029687462)
+texture = ExtResource("2_swtt1")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="caixa_vida" unique_id=559120879]
+position = Vector2(2.3841858e-07, -4.7683716e-07)
+rotation = -0.26889712
+scale = Vector2(0.99999994, 0.99999994)
+shape = SubResource("RectangleShape2D_ljsbu")
+
+[connection signal="body_entered" from="caixa_vida" to="caixa_vida" method="ganhar_vida"]

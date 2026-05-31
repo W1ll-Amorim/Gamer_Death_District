@@ -1,0 +1,26 @@
+[gd_scene format=3 uid="uid://duar0kd4es7pv"]
+
+[ext_resource type="Script" uid="uid://kcj2gpmp3lcs" path="res://scripts/script_projetil.gd" id="1_ri8ot"]
+[ext_resource type="Texture2D" uid="uid://d0521c2c6nv8n" path="res://assets/sprites/itens/projetil.png" id="2_qdcue"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_e138m"]
+radius = 0.9999782
+height = 5.999869
+
+[node name="projetil" type="Area2D" unique_id=1876678477]
+collision_layer = 8
+collision_mask = 4
+script = ExtResource("1_ri8ot")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=302862397]
+rotation = 1.5671256
+scale = Vector2(0.0082396045, 0.0082396045)
+texture = ExtResource("2_qdcue")
+
+[node name="collision" type="CollisionShape2D" parent="." unique_id=1246940918]
+rotation = -1.5773928
+shape = SubResource("CapsuleShape2D_e138m")
+debug_color = Color(0.9626513, 0.15150121, 0.31857756, 0.41960785)
+
+[connection signal="area_entered" from="." to="." method="_on_area_entered"]
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

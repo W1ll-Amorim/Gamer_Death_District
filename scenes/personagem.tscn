@@ -1,0 +1,263 @@
+[gd_scene format=3 uid="uid://bndipvekyamfr"]
+
+[ext_resource type="Script" uid="uid://caagv03nqe56f" path="res://scripts/script_personagem.gd" id="1_vvf27"]
+[ext_resource type="Texture2D" uid="uid://cl5hju7qb35pb" path="res://assets/sprites/Personagem/personagem.png" id="2_k0c8s"]
+[ext_resource type="AudioStream" uid="uid://bh2cg4rtyo1la" path="res://assets/sprites/disparo-81427.mp3" id="3_k0c8s"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_vvf27"]
+size = Vector2(97.52084, 212.18144)
+
+[sub_resource type="Animation" id="Animation_sweqy"]
+resource_name = "abaixando"
+length = 0.2
+step = 0.1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:region_rect")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [Rect2(102, 1374, 151, 174)]
+}
+
+[sub_resource type="Animation" id="Animation_2hs0m"]
+resource_name = "atirando"
+length = 0.2
+step = 0.1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:region_rect")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.099999994),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [Rect2(99, 1045, 149, 206), Rect2(329, 1043.4385, 182.92886, 207.56152)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Sprite2D:offset")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [Vector2(28.312504, 5.271591), Vector2(47.187504, 7.907379)]
+}
+tracks/2/type = "method"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath(".")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0.1),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [],
+"method": &"atirar"
+}]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Marker2D_dir:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 0.09981369, 0.1, 0.100041054, 0.1001),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 1,
+"values": [Vector2(45, -21), Vector2(45, -21), Vector2(60, -82), Vector2(45, -21), Vector2(38, -22)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Marker2D_esq:position")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0, 0.09981369, 0.1, 0.100041054, 0.1001),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 1,
+"values": [Vector2(-45, -21), Vector2(-45, -21), Vector2(-17, -82), Vector2(-45, -21), Vector2(-38, -22)]
+}
+
+[sub_resource type="Animation" id="Animation_onrkg"]
+resource_name = "atirando_ar"
+length = 0.2
+step = 0.1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:region_rect")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [Rect2(51, 828, 195, 144), Rect2(310, 821, 231.91846, 144.51178)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Sprite2D:offset")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.10035019),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [Vector2(12.583332, -2.635788), Vector2(31.458332, -2.635788)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Marker2D_dir:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0.1),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [Vector2(40, -14.5)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Marker2D_esq:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0.1),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [Vector2(-40, -14.5)]
+}
+tracks/4/type = "method"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath(".")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0.1),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [],
+"method": &"atirar"
+}]
+}
+
+[sub_resource type="Animation" id="Animation_1jxqw"]
+resource_name = "correndo"
+length = 0.4
+loop_mode = 1
+step = 0.1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:region_rect")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1004397, 0.19996214, 0.30040184),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 1,
+"values": [Rect2(190, 325, 109, 174), Rect2(6, 327, 156, 171), Rect2(334, 319, 89, 180), Rect2(6, 327, 156, 171)]
+}
+
+[sub_resource type="Animation" id="Animation_hqtel"]
+resource_name = "parado"
+length = 0.6
+loop_mode = 1
+step = 0.35
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:region_rect")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.36450312, 0.36498588, 0.36506847),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 1,
+"values": [Rect2(418, 63, 133, 198), Rect2(584, 230, 133, 189), Rect2(584, 230, 133, 189), Rect2(599, 63, 137, 197)]
+}
+
+[sub_resource type="Animation" id="Animation_i3pqv"]
+resource_name = "pulando"
+length = 0.45
+step = 0.15
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:region_rect")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.15024437, 0.30037007),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [Rect2(57, 604, 107, 167), Rect2(203, 581, 172, 144), Rect2(57, 604, 107, 167)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_b26j0"]
+_data = {
+&"abaixando": SubResource("Animation_sweqy"),
+&"atirando": SubResource("Animation_2hs0m"),
+&"atirando_ar": SubResource("Animation_onrkg"),
+&"correndo": SubResource("Animation_1jxqw"),
+&"parado": SubResource("Animation_hqtel"),
+&"pulando": SubResource("Animation_i3pqv")
+}
+
+[node name="personagem" type="CharacterBody2D" unique_id=1544067219 groups=["player"]]
+z_index = 1
+position = Vector2(1, 0)
+collision_layer = 2
+script = ExtResource("1_vvf27")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=293166122]
+scale = Vector2(0.36468607, 0.43525457)
+texture = ExtResource("2_k0c8s")
+offset = Vector2(31.458332, -2.635788)
+region_enabled = true
+region_rect = Rect2(310, 821, 231.91846, 144.51178)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=416213211]
+position = Vector2(-1.4999994, 6.7500024)
+scale = Vector2(0.31788078, 0.37939227)
+shape = SubResource("RectangleShape2D_vvf27")
+
+[node name="Camera" type="Camera2D" parent="." unique_id=1335413082]
+position = Vector2(4, -104)
+scale = Vector2(0.753641, 0.389821)
+ignore_rotation = false
+zoom = Vector2(1.5, 1.5)
+limit_left = 0
+limit_top = -78
+limit_right = 2891
+limit_bottom = 650
+limit_smoothed = true
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=233938789]
+libraries/ = SubResource("AnimationLibrary_b26j0")
+
+[node name="Marker2D_dir" type="Marker2D" parent="." unique_id=261284687]
+position = Vector2(40, -14.5)
+
+[node name="Marker2D_esq" type="Marker2D" parent="." unique_id=1772125168]
+position = Vector2(-40, -14.5)
+
+[node name="SomTiro" type="AudioStreamPlayer2D" parent="." unique_id=204807231]
+stream = ExtResource("3_k0c8s")

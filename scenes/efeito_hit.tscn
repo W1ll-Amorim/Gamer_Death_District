@@ -1,0 +1,71 @@
+[gd_scene format=3 uid="uid://cl7sxnjgp0bhi"]
+
+[ext_resource type="Texture2D" uid="uid://bci8ig5fcsayp" path="res://assets/sprites/Hit-Yellow.png" id="1_lepot"]
+
+[sub_resource type="Animation" id="Animation_1ou86"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:region_rect")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Rect2(1071.8337, 95.67349, 863.8557, 868.4507)]
+}
+
+[sub_resource type="Animation" id="Animation_hqo2f"]
+resource_name = "hit_efeect"
+length = 0.7
+step = 0.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:region_rect")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.05066337, 0.102975324, 0.1530338, 0.20284307, 0.25183323, 0.30162543, 0.35081267, 0.40362948, 0.45281672, 0.5020041, 0.5524011, 0.6009836, 0.65051603),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [Rect2(1071.8337, 95.67349, 863.8557, 868.4507), Rect2(2107.2722, 63.80034, 836.7654, 839.7297), Rect2(3177.1948, 96.781166, 826.0547, 770.9117), Rect2(86.71254, 1096.7189, 855.9378, 850.23157), Rect2(1180.5541, 1102.2335, 817.2633, 790.4027), Rect2(2225.9258, 1119.4619, 797.02783, 763.89966), Rect2(3313.7192, 1139.5313, 664.00024, 759.969), Rect2(214.12515, 2147.2185, 695.12524, 757.37524), Rect2(1232.3604, 2150.0012, 751.02783, 765.2073), Rect2(2257.081, 2147.4094, 709.2871, 734.3948), Rect2(209.56258, 3270.8638, 561.1934, 646.07983), Rect2(1224.7618, 3229.5361, 647.89343, 707.6284), Rect2(2186.026, 3221.766, 707.6284, 732.9009), Rect2(3262.1738, 3222.6443, 659.29736, 713.1177)]
+}
+tracks/1/type = "method"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0.13995527, 0.69455576),
+"transitions": PackedFloat32Array(1, 1),
+"values": [{
+"args": [],
+"method": &"queue_free"
+}, {
+"args": [],
+"method": &"queue_free"
+}]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_a02rq"]
+_data = {
+&"RESET": SubResource("Animation_1ou86"),
+&"hit_efeect": SubResource("Animation_hqo2f")
+}
+
+[node name="Node2D" type="Node2D" unique_id=452363135]
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=874416318]
+position = Vector2(34.460022, 34.197018)
+scale = Vector2(0.079953656, 0.079953656)
+texture = ExtResource("1_lepot")
+region_enabled = true
+region_rect = Rect2(1071.8337, 95.67349, 863.8557, 868.4507)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=106296483]
+libraries/ = SubResource("AnimationLibrary_a02rq")
+autoplay = &"hit_efeect"

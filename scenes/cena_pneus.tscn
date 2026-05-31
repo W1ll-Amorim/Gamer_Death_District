@@ -1,0 +1,19 @@
+[gd_scene format=3 uid="uid://b6qwrb0ara5to"]
+
+[ext_resource type="Texture2D" uid="uid://c45g5rjwdjvf3" path="res://assets/sprites/pilha de pneus.png" id="1_c7bct"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ilc6c"]
+size = Vector2(61, 92)
+
+[node name="Node2D" type="Node2D" unique_id=1372250021]
+
+[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=1033489239]
+
+[node name="Sprite2D" type="Sprite2D" parent="StaticBody2D" unique_id=1862762219]
+position = Vector2(625.25, 390.75)
+scale = Vector2(0.13704428, 0.1479492)
+texture = ExtResource("1_c7bct")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=1771490427]
+position = Vector2(622.5, 388)
+shape = SubResource("RectangleShape2D_ilc6c")

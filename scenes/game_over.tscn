@@ -1,0 +1,63 @@
+[gd_scene format=3 uid="uid://dqqswis1fyg0i"]
+
+[ext_resource type="Script" uid="uid://spxvomajouep" path="res://scripts/script_game_over.gd" id="1_7m3ot"]
+[ext_resource type="Texture2D" uid="uid://dgiuk8whle8vm" path="res://assets/sprites/telas/tela final.jpeg" id="2_v3hpu"]
+[ext_resource type="Texture2D" uid="uid://cpwm3b3bk1yv1" path="res://assets/sprites/telas/button.png" id="3_irg28"]
+[ext_resource type="Texture2D" uid="uid://bygbg6o7h6mpb" path="res://assets/sprites/telas/button tentar novamente.png" id="4_2jtsn"]
+[ext_resource type="FontFile" uid="uid://cpxlev7pu0gbv" path="res://assets/fonts/PixelPurl.ttf" id="5_8bugq"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_28vn7"]
+
+[node name="Node2D" type="Node2D" unique_id=1650407666]
+script = ExtResource("1_7m3ot")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1475897561]
+offset_top = -2.0
+offset_right = 1158.0
+offset_bottom = 644.0
+color = Color(0.029506557, 0.029506557, 0.029506557, 1)
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=321731446]
+position = Vector2(550, 330.00003)
+scale = Vector2(0.8030479, 0.72032464)
+texture = ExtResource("2_v3hpu")
+
+[node name="Button_sair" type="Button" parent="." unique_id=700575062]
+offset_left = 472.0
+offset_top = 501.0
+offset_right = 617.0
+offset_bottom = 582.0
+icon = ExtResource("3_irg28")
+
+[node name="Button_tentar_novamente" type="Button" parent="." unique_id=980117938]
+offset_left = 472.0
+offset_top = 404.0
+offset_right = 626.0
+offset_bottom = 483.0
+icon = ExtResource("4_2jtsn")
+
+[node name="Score" type="Label" parent="." unique_id=617942440]
+offset_left = 310.0
+offset_top = 271.0
+offset_right = 382.0
+offset_bottom = 302.0
+theme_override_colors/font_color = Color(0.7607843, 0.19607843, 0, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 7
+theme_override_fonts/font = ExtResource("5_8bugq")
+theme_override_font_sizes/font_size = 35
+
+[node name="jogador" type="Label" parent="." unique_id=1840500570]
+offset_left = 310.0
+offset_top = 208.0
+offset_right = 358.0
+offset_bottom = 231.0
+theme_override_colors/font_color = Color(0.7607843, 0.19607843, 0, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 7
+theme_override_fonts/font = ExtResource("5_8bugq")
+theme_override_font_sizes/font_size = 35
+theme_override_styles/focus = SubResource("StyleBoxFlat_28vn7")
+
+[connection signal="pressed" from="Button_sair" to="." method="_on_button_sair_pressed"]
+[connection signal="pressed" from="Button_tentar_novamente" to="." method="_on_button_tentar_novamente_pressed"]

@@ -1,0 +1,44 @@
+[gd_scene format=3 uid="uid://p1k21bifxw54"]
+
+[ext_resource type="Script" uid="uid://s4trlmqghs32" path="res://scripts/tela_inicio.gd" id="1_iugsl"]
+[ext_resource type="Texture2D" uid="uid://cr71dxif35emt" path="res://assets/sprites/tela_inicio.jpeg" id="2_q8etk"]
+[ext_resource type="Texture2D" uid="uid://dfuxpygt1iowx" path="res://assets/sprites/icone_start.png" id="3_kl3w1"]
+[ext_resource type="FontFile" uid="uid://cpxlev7pu0gbv" path="res://assets/fonts/PixelPurl.ttf" id="4_m5npo"]
+
+[node name="Node2D" type="Node2D" unique_id=711754208]
+script = ExtResource("1_iugsl")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1447362141]
+position = Vector2(576, 368)
+scale = Vector2(0.9035067, 0.90864956)
+texture = ExtResource("2_q8etk")
+
+[node name="Button" type="Button" parent="." unique_id=1347017079]
+offset_left = 471.0
+offset_top = 383.0
+offset_right = 625.0
+offset_bottom = 462.0
+icon = ExtResource("3_kl3w1")
+
+[node name="Label" type="Label" parent="." unique_id=658602775]
+offset_left = 437.0
+offset_top = 275.0
+offset_right = 644.0
+offset_bottom = 306.0
+theme_override_colors/font_color = Color(0.7624415, 0.19681191, 1.92523e-07, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 7
+theme_override_fonts/font = ExtResource("4_m5npo")
+theme_override_font_sizes/font_size = 36
+text = "Nome Do Jogador"
+
+[node name="LineEdit" type="LineEdit" parent="." unique_id=1441360236]
+offset_left = 419.0
+offset_top = 326.0
+offset_right = 673.0
+offset_bottom = 370.0
+theme_override_fonts/font = ExtResource("4_m5npo")
+theme_override_font_sizes/font_size = 28
+
+[connection signal="pressed" from="Button" to="." method="iniciar_jogo"]

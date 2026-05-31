@@ -1,0 +1,250 @@
+[gd_scene format=3 uid="uid://cja7s71q66fab"]
+
+[ext_resource type="Script" uid="uid://dhkdgxtl3xno5" path="res://scripts/zombie_feme.gd" id="1_rwric"]
+[ext_resource type="Texture2D" uid="uid://y3dqj4uvftvp" path="res://assets/sprites/inimigos/Zombie_feme.png" id="2_flnx0"]
+[ext_resource type="AudioStream" uid="uid://5olmsnw1bk65" path="res://assets/audio/zombie-6851.mp3" id="3_7y6q6"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_hgjap"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_iqbdy"]
+size = Vector2(32.4375, 80.046875)
+
+[sub_resource type="Animation" id="Animation_6wvik"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:region_rect")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Rect2(481, 302, 92, 134)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Sprite2D/Area2D_atack/CollisionShape2D:disabled")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+
+[sub_resource type="Animation" id="Animation_wl3bq"]
+resource_name = "andando"
+length = 0.8
+loop_mode = 1
+step = 0.1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:region_rect")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [Rect2(292, 300, 90, 136), Rect2(481, 302, 92, 134), Rect2(687, 300, 84, 136), Rect2(878, 300, 80, 136), Rect2(1072, 300, 80, 136), Rect2(1251, 300, 94, 136), Rect2(1444, 298, 102, 138), Rect2(1634, 298, 96, 138)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Sprite2D/Area2D_atack/CollisionShape2D:disabled")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+
+[sub_resource type="Animation" id="Animation_hgjap"]
+resource_name = "atacando"
+length = 0.8
+loop_mode = 1
+step = 0.1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:region_rect")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [Rect2(298, 524, 80, 132), Rect2(481, 524, 92, 132), Rect2(670, 524, 86, 132), Rect2(867, 502, 70, 154), Rect2(1053, 504, 72, 152), Rect2(1257, 512, 64, 144), Rect2(1432, 526, 98, 130), Rect2(1634, 526, 100, 130)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Sprite2D/Area2D_atack/CollisionShape2D:disabled")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.70373034, 0.8),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [true, false, true]
+}
+
+[sub_resource type="Animation" id="Animation_373wf"]
+resource_name = "dano"
+length = 0.4
+step = 0.1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:region_rect")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 1,
+"values": [Rect2(288, 736, 74, 132), Rect2(481, 736, 74, 132), Rect2(674, 736, 74, 132), Rect2(864.76337, 734.1448, 84.1579, 133.85522)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Sprite2D/Area2D_atack/CollisionShape2D:disabled")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+
+[sub_resource type="Animation" id="Animation_s11b4"]
+resource_name = "morrendo"
+length = 0.6
+step = 0.1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:region_rect")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 1,
+"values": [Rect2(292, 958, 116, 122), Rect2(474, 970, 128, 110), Rect2(662, 998, 130, 82), Rect2(829, 1042, 154, 38), Rect2(1026, 1044, 152, 36)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Sprite2D/Area2D_atack/CollisionShape2D:disabled")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+
+[sub_resource type="Animation" id="Animation_wgegv"]
+resource_name = "parado"
+length = 0.7
+loop_mode = 1
+step = 0.1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:region_rect")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [Rect2(282, 70, 66, 134), Rect2(471, 70, 68, 134), Rect2(662, 70, 70, 134), Rect2(855, 70, 70, 134), Rect2(1044, 70, 70, 134), Rect2(1237, 70, 68, 134), Rect2(1434, 70, 66, 134)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Sprite2D/Area2D_atack/CollisionShape2D:disabled")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_mbm5u"]
+_data = {
+&"RESET": SubResource("Animation_6wvik"),
+&"andando": SubResource("Animation_wl3bq"),
+&"atacando": SubResource("Animation_hgjap"),
+&"dano": SubResource("Animation_373wf"),
+&"morrendo": SubResource("Animation_s11b4"),
+&"parado": SubResource("Animation_wgegv")
+}
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_wl3bq"]
+size = Vector2(25, 80)
+
+[node name="zombie_feme" type="Node2D" unique_id=641815750 groups=["inimigo", "reset"]]
+z_index = 1
+
+[node name="zombie_feme" type="CharacterBody2D" parent="." unique_id=1583470638]
+collision_layer = 4
+script = ExtResource("1_rwric")
+
+[node name="Sprite2D" type="Sprite2D" parent="zombie_feme" unique_id=883835814]
+scale = Vector2(0.5869565, 0.61194026)
+texture = ExtResource("2_flnx0")
+region_enabled = true
+region_rect = Rect2(481, 302, 92, 134)
+
+[node name="Area2D_atack" type="Area2D" parent="zombie_feme/Sprite2D" unique_id=922730761]
+position = Vector2(10.222221, -26.14634)
+scale = Vector2(1.7037035, 1.6341462)
+collision_layer = 4
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="zombie_feme/Sprite2D/Area2D_atack" unique_id=1536964588]
+position = Vector2(22, -6)
+shape = SubResource("CircleShape2D_hgjap")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="zombie_feme" unique_id=1199214526]
+shape = SubResource("RectangleShape2D_iqbdy")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="zombie_feme" unique_id=1777893701]
+libraries/ = SubResource("AnimationLibrary_mbm5u")
+
+[node name="Area_dano" type="Area2D" parent="zombie_feme" unique_id=785137152 groups=["inimigo"]]
+collision_layer = 4
+collision_mask = 0
+
+[node name="dano" type="CollisionShape2D" parent="zombie_feme/Area_dano" unique_id=113557373]
+shape = SubResource("RectangleShape2D_wl3bq")
+debug_color = Color(0.8600083, 0.30199146, 0.5231563, 0.41960785)
+
+[node name="RayCast2DDir" type="RayCast2D" parent="zombie_feme" unique_id=1809298468]
+position = Vector2(30, -7)
+
+[node name="RayCast2DEsq" type="RayCast2D" parent="zombie_feme" unique_id=379651015]
+position = Vector2(-30, -7)
+
+[node name="damage_position" type="Marker2D" parent="." unique_id=913438375]
+position = Vector2(0, -60)
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="." unique_id=1069110189]
+stream = ExtResource("3_7y6q6")
+autoplay = true
+
+[connection signal="body_entered" from="zombie_feme/Sprite2D/Area2D_atack" to="zombie_feme" method="_on_area_2d_atack_body_entered"]

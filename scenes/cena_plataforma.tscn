@@ -1,0 +1,43 @@
+[gd_scene format=3 uid="uid://bh4uywqtp4ggf"]
+
+[ext_resource type="Texture2D" uid="uid://bcmd17d6qbnk5" path="res://assets/sprites/Sprite andaime plataforma.png" id="1_e7isu"]
+[ext_resource type="Texture2D" uid="uid://cb64dmm6huw6h" path="res://assets/sprites/sprite viga de ferro.png" id="2_o0cug"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_jup64"]
+size = Vector2(177, 24)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_e7isu"]
+size = Vector2(100, 13)
+
+[node name="Node2D" type="Node2D" unique_id=1918943991]
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=2107336066]
+position = Vector2(506.99997, 277.75)
+scale = Vector2(0.39648443, 0.40592447)
+texture = ExtResource("1_e7isu")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=496167219]
+position = Vector2(-52, 42)
+
+[node name="Sprite2D" type="Sprite2D" parent="StaticBody2D" unique_id=642900285]
+position = Vector2(732, 270)
+scale = Vector2(0.13563561, 0.13902241)
+texture = ExtResource("2_o0cug")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=2035528092]
+position = Vector2(696, 261)
+shape = SubResource("RectangleShape2D_jup64")
+one_way_collision = true
+
+[node name="StaticBody2D2" type="StaticBody2D" parent="." unique_id=1299795316]
+position = Vector2(-2, -29)
+
+[node name="Sprite2D" type="Sprite2D" parent="StaticBody2D2" unique_id=624838534]
+position = Vector2(470, 435)
+scale = Vector2(0.07807807, 0.057692338)
+texture = ExtResource("2_o0cug")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D2" unique_id=2047457789]
+position = Vector2(449, 431.5)
+shape = SubResource("RectangleShape2D_e7isu")
+one_way_collision = true

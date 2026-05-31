@@ -1,0 +1,101 @@
+[gd_scene format=3 uid="uid://bdv5v1kwjs4a4"]
+
+[ext_resource type="Texture2D" uid="uid://jonmxdp6rps1" path="res://assets/backgrounds/Fase_1.png" id="1_3wmwu"]
+[ext_resource type="Script" uid="uid://bde3brm2cq8qt" path="res://scripts/scriptNode2D_fase1.gd" id="1_cs2tf"]
+[ext_resource type="PackedScene" uid="uid://bndipvekyamfr" path="res://scenes/personagem.tscn" id="3_3wmwu"]
+[ext_resource type="PackedScene" uid="uid://b03s8gmtkt024" path="res://scenes/caixa_vida.tscn" id="6_5sqpf"]
+[ext_resource type="Script" uid="uid://doee4atjt0csu" path="res://scripts/script_parallax_2d.gd" id="6_bhug5"]
+[ext_resource type="Script" uid="uid://yq6a3s1nf6s3" path="res://scripts/script_hub.gd" id="7_5sqpf"]
+[ext_resource type="FontFile" uid="uid://cpxlev7pu0gbv" path="res://assets/fonts/PixelPurl.ttf" id="8_lephe"]
+[ext_resource type="Texture2D" uid="uid://cakwxiaq4n6c4" path="res://assets/sprites/images.png" id="9_yeb1h"]
+[ext_resource type="PackedScene" uid="uid://bh4uywqtp4ggf" path="res://scenes/cena_plataforma.tscn" id="10_d00eo"]
+[ext_resource type="PackedScene" uid="uid://duemyjlfyb546" path="res://scenes/cena_plataforma_teste.tscn" id="11_wegpt"]
+[ext_resource type="PackedScene" uid="uid://386b5gcp8j2a" path="res://scenes/cena_onibus.tscn" id="12_v6v6p"]
+[ext_resource type="Texture2D" uid="uid://ddbxha2j2o02n" path="res://assets/sprites/Placas de aviso.png" id="13_cbyri"]
+[ext_resource type="PackedScene" uid="uid://b6qwrb0ara5to" path="res://scenes/cena_pneus.tscn" id="14_3etx6"]
+[ext_resource type="PackedScene" uid="uid://dy2rusdg1si47" path="res://scenes/cena_cabine.tscn" id="15_vginq"]
+[ext_resource type="PackedScene" uid="uid://bw5vwkue3t2mc" path="res://scenes/plataforma_invertida.tscn" id="16_3esfr"]
+
+[node name="fase" type="Node2D" unique_id=1244873265]
+position = Vector2(2, 0)
+script = ExtResource("1_cs2tf")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=1198947567]
+collision_mask = 0
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="StaticBody2D" unique_id=608825537]
+position = Vector2(1420.5634, 506.93896)
+polygon = PackedVector2Array(-1422.5634, -506.93896, -1422.5634, 141.06107, 1473.4366, 141.06107, 1465.4366, -578.93896, 1505.4366, 165.06107, -1462.5634, 173.06107)
+
+[node name="sprite2d" type="Sprite2D" parent="." unique_id=1408735756]
+position = Vector2(1422, 288)
+scale = Vector2(1.1172541, 0.7367941)
+texture = ExtResource("1_3wmwu")
+
+[node name="personagem" parent="." unique_id=1143566151 instance=ExtResource("3_3wmwu")]
+position = Vector2(171, 597)
+
+[node name="Parallax2D" type="ParallaxBackground" parent="." unique_id=552847629]
+layer = 1
+script = ExtResource("6_bhug5")
+
+[node name="ProgressBar" type="ProgressBar" parent="Parallax2D" unique_id=182505]
+offset_left = 61.0
+offset_top = 62.0
+offset_right = 307.0
+offset_bottom = 89.0
+step = 1.0
+value = 2.0
+
+[node name="caixa_vida" parent="." unique_id=1651701271 instance=ExtResource("6_5sqpf")]
+position = Vector2(303, 579)
+
+[node name="HUB" type="CanvasLayer" parent="." unique_id=322863337]
+script = ExtResource("7_5sqpf")
+
+[node name="Control" type="Control" parent="HUB" unique_id=1802711270]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Score" type="Label" parent="HUB/Control" unique_id=1379168205]
+layout_mode = 0
+offset_left = 1030.0
+offset_top = 47.0
+offset_right = 1112.0
+offset_bottom = 82.0
+theme_override_fonts/font = ExtResource("8_lephe")
+theme_override_font_sizes/font_size = 35
+text = "Score:"
+
+[node name="Sprite2D" type="Sprite2D" parent="HUB/Control" unique_id=581128843]
+position = Vector2(981.00006, 59.000008)
+scale = Vector2(0.30315048, 0.30315048)
+texture = ExtResource("9_yeb1h")
+
+[node name="Node2D" parent="." unique_id=1858178937 instance=ExtResource("10_d00eo")]
+position = Vector2(97, 129)
+
+[node name="Node2D" parent="Node2D" unique_id=1450102382 instance=ExtResource("11_wegpt")]
+position = Vector2(472, -24)
+
+[node name="Node2D2" parent="." unique_id=1209225341 instance=ExtResource("12_v6v6p")]
+position = Vector2(910, 256)
+
+[node name="PlacasDeAviso" type="Sprite2D" parent="." unique_id=1226444848]
+light_mask = 2
+position = Vector2(1028, 598)
+scale = Vector2(0.116862185, 0.10400384)
+texture = ExtResource("13_cbyri")
+
+[node name="Node2D3" parent="." unique_id=394675689 instance=ExtResource("14_3etx6")]
+position = Vector2(1553, 214)
+
+[node name="Node2D4" parent="." unique_id=1609987932 instance=ExtResource("15_vginq")]
+position = Vector2(-472, 202)
+
+[node name="Node2D5" parent="." unique_id=1905547673 instance=ExtResource("16_3esfr")]
+position = Vector2(2425, 307)

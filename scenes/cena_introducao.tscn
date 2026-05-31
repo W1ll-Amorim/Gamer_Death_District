@@ -1,0 +1,12 @@
+[gd_scene format=3 uid="uid://moyjbkmxqrl6"]
+
+[ext_resource type="Script" uid="uid://b5hrtky33a5sg" path="res://scripts/cena_introducao.gd" id="1_1g7iy"]
+[ext_resource type="Texture2D" uid="uid://bjp7unesflt4p" path="res://assets/backgrounds/introdu+-¦++¦o_jogo.jpeg" id="2_41k7x"]
+
+[node name="Node2D" type="Node2D" unique_id=1897493862]
+script = ExtResource("1_1g7iy")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=881231494]
+position = Vector2(579.0744, 325.12497)
+scale = Vector2(0.9061337, 0.75937855)
+texture = ExtResource("2_41k7x")
