@@ -31,14 +31,24 @@ Jogo de plataforma 2D desenvolvido com Godot Engine 4.6.
 
 ## 📸 Screenshots
 
-Adicione aqui imagens do jogo.
+### Menu Principal
+
+![Menu Principal](screeshots/print1.png)
+
+### Instruções
+
+![Instruções do jogo](screeshots/print2.png)
+
+### Game play
+
+![Game Play](screeshots/gameplay.gif)
 
 ## 🚀 Como executar
 
 1. Clone o repositório
 
 ```bash
-git clone https://github.com/seuusuario/Gamer_Death_District.git
+git clone https://github.com/W1ll-Amorim/Gamer_Death_District.git
 ```
 
 2. Abra o projeto na Godot Engine 4.6
