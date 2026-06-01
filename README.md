@@ -1,4 +1,4 @@
-# 🎮 Gamer Death District
+# 🎮 Gamer Dead District
 
 Jogo de plataforma 2D desenvolvido com Godot Engine 4.6.
 
@@ -48,7 +48,7 @@ Jogo de plataforma 2D desenvolvido com Godot Engine 4.6.
 1. Clone o repositório
 
 ```bash
-git clone https://github.com/W1ll-Amorim/Gamer_Death_District.git
+git clone https://github.com/W1ll-Amorim/Gamer_Dead_District.git
 ```
 
 2. Abra o projeto na Godot Engine 4.6
